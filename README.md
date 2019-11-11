@@ -1,10 +1,10 @@
 # Search And Do Something
 
-Use one of the pre-compiled binaries in the [releases](https://github.com/yammine/sad/releases)
+Use one of the pre-compiled binaries in the [releases](https://github.com/1debit/sad/releases)
 or build it yourself:
 
 ```bash
-go get github.com/yammine/sad
+go get github.com/1debit/sad
 ```
 
 ### Examples
@@ -53,8 +53,13 @@ Clone all repos:
 ```
 for url in $(go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | jq '.url' | tr -d '"'); do git clone $url; done
 ```
+If that does not work, try this:
+```
+go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks > sad.out
+cd ...
+cat .../sad.out | jq '.url' | tr -d '"' | (while read url; do git clone $url; done)
+```
 Get the language stack (list of unique languages):
 ```
 go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | jq '.language' | tr -d '"' | sort | uniq
 ```
-
