@@ -51,6 +51,6 @@ go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit
 ```
 Clone all repos:
 ```
-for url in $(go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks); do git clone $url; done
+for url in $(go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | jq '.url' | tr -d '"'); do git clone $url; done
 ```
 
