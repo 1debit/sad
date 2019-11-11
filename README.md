@@ -53,7 +53,7 @@ Clone all repos:
 ```
 for url in $(go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | jq '.url' | tr -d '"'); do git clone $url; done
 ```
-Get the language stack (list of uniq languages):
+Get the language stack (list of unique languages):
 ```
 go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | jq '.language' | tr -d '"' | sort | uniq
 ```
