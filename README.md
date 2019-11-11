@@ -36,3 +36,21 @@ Would look like:
 }
 ...
 ```
+### Macos
+Install:
+```
+brew install go
+git clone git@github.com:yammine/sad.git
+cd sad
+go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks
+```
+
+Compare the number of repos run:
+```
+go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks | nl
+```
+Clone all all repos:
+```
+for url in $(go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks); do git clone $url; done
+```
+
