@@ -45,7 +45,7 @@ cd sad
 go run main.go --token=your_github_personal_access_token(not_oauth) --org=1debit --language --forks
 ```
 
-If you want to use the script not inside the cloned folder, make a build and use the binary instead of go run main.go:
+If you want to use the script outside the cloned folder, make a build and use the binary instead of "go run main.go":
 ```
 try:
 go build
