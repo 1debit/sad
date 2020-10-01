@@ -1,3 +1,5 @@
+[![Monocle Service Score Badge](https://monocle.prod.chmfin.com/badge/sad/service?s=JDJhJDEyJFpyZ3U4bGJtQVRGUXlhQmRWUmNFWWVWbF)](https://monocle.prod.chmfin.com/1debit/sad)
+
 # Search And Do Something
 
 Use one of the pre-compiled binaries in the [releases](https://github.com/1debit/sad/releases)
